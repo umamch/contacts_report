@@ -1,0 +1,42 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" href="{% static 'css/contacts.css' %}">
+<body>
+
+<h1>Contacts!</h1>
+<p>CSV contacts!</p>
+<table id="customers">
+    <tr>
+        <th>FirstName</th>
+        <th>LastName</th>
+        <th>Street</th>
+        <th>Zip</th>
+        <th>City</th>
+        <th>Image</th>
+    </tr>
+    {% if contacts  %}
+        {% for i in contacts %}
+            <tr>
+                <td>{{ i.firstname }}</td>
+                <td>{{ i.lastname }}</td>
+                <td>{{ i.street }}</td>
+                <td>{{ i.zip }}</td>
+                <td>{{ i.city }}</td>
+                <td><img src="{{ i.image }}" style="width: 300px; height: 337px; object-fit: contain;" alt="Image not available"/></td>
+            </tr>
+        {% endfor %}
+    {% else %}
+        <tr>
+        <td>{{ singleContact.firstname }}</td>
+        <td>{{ singleContact.lastname }}</td>
+        <td>{{ singleContact.street }}</td>
+        <td>{{ singleContact.zip }}</td>
+        <td>{{ singleContact.city }}</td>
+        <td><img src="{{ singleContact.image }}" style="width: 300px; height: 337px; object-fit: contain;" alt="Image not available"/></td>
+    </tr>
+    {% endif %}
+</table>
+</body>
+</html>
