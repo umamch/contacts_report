@@ -1,7 +1,7 @@
-From python:3.8
+From python:3.10
 
 # Install system depedencies
-RUN pip install pipenv=="2022.8.17"
+
 RUN pip install --upgrade pip
 #RUN apt-get update && apt-get install -y procps
 
