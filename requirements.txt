@@ -14,4 +14,7 @@ urllib3==1.26.4
 pandas
 pillow
 validators
-rest_framework
+djangorestframework
+djangorestframework-jsonapi
+django-responsive-images
+djangorestframework-filters==1.0.0.dev0
