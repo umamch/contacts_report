@@ -7,7 +7,6 @@ from django.templatetags.static import static
 import requests
 import validators
 import logging
-import datetime
 
 
 class ContactsViewSet(viewsets.ModelViewSet):
