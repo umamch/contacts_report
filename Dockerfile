@@ -3,7 +3,6 @@ From python:3.10
 # Install system depedencies
 
 RUN pip install --upgrade pip
-#RUN apt-get update && apt-get install -y procps
 
 # Install python dependencies
 WORKDIR /tmp/
@@ -15,4 +14,3 @@ EXPOSE 8000
 
 
 CMD python manage.py runserver
-#CMD ["sleep", "infinity"]
